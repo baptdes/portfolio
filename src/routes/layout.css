@@ -1,0 +1,124 @@
+@import 'tailwindcss';
+
+@theme {
+	/* === Primary === */
+	--color-primary: #d3fe43;
+	--color-primary-container: #a8d000;
+	--color-on-primary: #4c6000;
+	--color-primary-fixed: #d0fb40;
+	--color-primary-fixed-dim: #c3ed31;
+	--color-primary-dim: #c5ef34;
+	--color-on-primary-fixed: #3a4a00;
+	--color-on-primary-fixed-variant: #536900;
+	--color-on-primary-container: #334200;
+	--color-inverse-primary: #526700;
+
+	/* === Secondary === */
+	--color-secondary: #ece855;
+	--color-secondary-dim: #deda48;
+	--color-secondary-fixed: #ece855;
+	--color-secondary-fixed-dim: #deda48;
+	--color-secondary-container: #636100;
+	--color-on-secondary: #565400;
+	--color-on-secondary-fixed: #434100;
+	--color-on-secondary-fixed-variant: #605e00;
+	--color-on-secondary-container: #fffbb1;
+
+	/* === Tertiary === */
+	--color-tertiary: #ffe880;
+	--color-tertiary-dim: #e8cb33;
+	--color-tertiary-fixed: #f7da41;
+	--color-tertiary-fixed-dim: #e8cb33;
+	--color-tertiary-container: #f7da41;
+	--color-on-tertiary: #635500;
+	--color-on-tertiary-fixed: #443a00;
+	--color-on-tertiary-fixed-variant: #645600;
+	--color-on-tertiary-container: #594c00;
+
+	/* === Surface === */
+	--color-surface: #0c0f0f;
+	--color-surface-dim: #0c0f0f;
+	--color-surface-bright: #282d2d;
+	--color-surface-tint: #d3fe43;
+	--color-surface-container-lowest: #000000;
+	--color-surface-container-low: #111414;
+	--color-surface-container: #171a1a;
+	--color-surface-container-high: #1c2020;
+	--color-surface-container-highest: #222727;
+	--color-surface-variant: #222727;
+	--color-on-surface: #edeeed;
+	--color-on-surface-variant: #a9abab;
+	--color-inverse-surface: #f8faf9;
+	--color-inverse-on-surface: #535655;
+
+	/* === Background === */
+	--color-background: #0c0f0f;
+	--color-on-background: #edeeed;
+
+	/* === Outline === */
+	--color-outline: #737676;
+	--color-outline-variant: #464848;
+
+	/* === Error === */
+	--color-error: #ff7351;
+	--color-error-dim: #d53d18;
+	--color-error-container: #b92902;
+	--color-on-error: #450900;
+	--color-on-error-container: #ffd2c8;
+
+	/* === Typography === */
+	--font-headline: 'Space Grotesk', sans-serif;
+	--font-body: 'Manrope', sans-serif;
+	--font-label: 'Manrope', sans-serif;
+
+	/* === Border Radius (custom design system scale) === */
+	/* NOTE: rounded-2xl/3xl intentionally NOT overridden — they use Tailwind's built-in 1rem/1.5rem */
+	--radius-DEFAULT: 0.125rem;
+	--radius-lg: 0.25rem;
+	--radius-xl: 0.5rem;
+	--radius-full: 0.75rem;
+}
+
+@layer base {
+	body {
+		font-family: var(--font-body);
+		background-color: var(--color-background);
+		color: var(--color-on-surface);
+		@apply selection:bg-primary selection:text-on-primary;
+	}
+
+	.material-symbols-outlined {
+		font-variation-settings:
+			'FILL' 0,
+			'wght' 300,
+			'GRAD' 0,
+			'opsz' 24;
+	}
+}
+
+@layer utilities {
+	.soft-grain {
+		background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB9E_qzRxIrJtYnKJZd-h1Td6PNwBn664kRsdb4N4xmGH1Qdx8Yt74VLdmZ8RECkD1C5tQveJfskcscrcS7EXhjE0gQYkL6dtqDGd9ucgxXZ_iDPpu8m0GFEu5e-GJ6vVoxBNSGPMMHk_pkYj0Af-x_shZb8rm_jdBGAuUZqn-dZSyyYy_yME_hPpyHCxXCLxNKwTl1-tmvgPk4QucBfccaKvr2wk3xf2qEOkPKaTaWaERcM0y1hw9b98lGJHTtf_QbbBi0FLCmy6iI');
+		background-color: #0c0f0f;
+	}
+
+	.glass-effect {
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
+	}
+
+	.primary-gradient-text {
+		background: linear-gradient(135deg, #d3fe43 0%, #a8d000 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.hero-gradient {
+		background: radial-gradient(
+			circle at 50% 50%,
+			rgba(211, 254, 67, 0.15) 0%,
+			rgba(12, 15, 15, 1) 70%
+		);
+	}
+}
