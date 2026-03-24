@@ -1,6 +1,6 @@
 <script lang="ts">
 	const videoPlaceholderUrl =
-		'https://lh3.googleusercontent.com/aida-public/AB6AXuBfBz32cdo4e2yYQMoPmLM34xRFYDm2INnhT8A_mV9-oLIpcaxJT7uKI0xzVeDAKlkuNgvgZlY2AwnpLuymHz8guwD2aVTM52PnJXAGwK0WhUpq4Q9i4PGmOXFCRhY9SpNpZxqu2iee-6vsUYaAJdqsQRC-8LGWw1mbbWYFwMQcd7nE8E4UMSEgcntRl40SxC13qO8VDHwD8bGRp65yBT-2yTY5SL8QLj6b7maJvI0YChfoYwpR1AFOpJBcSrG5qVSRK4uIJixqjPli';
+		'https://art.ngfiles.com/images/2061000/2061047_dbotnewgrounds_send-this-to-a-friend-who-says-a-joke-thats-not-funny-3.jpg?f1630968013';
 </script>
 
 <section
@@ -30,22 +30,22 @@
 				<span
 					class="font-headline text-sm font-light tracking-[0.4em] text-on-surface-variant/80 uppercase md:text-lg"
 				>
-					AI Engineer
+					Ingénieur IA
 				</span>
 				<span class="h-1 w-1 rounded-full bg-primary/40"></span>
 				<span
 					class="font-headline text-sm font-light tracking-[0.4em] text-on-surface-variant/80 uppercase md:text-lg"
 				>
-					Software Architect
+					Logiciel
 				</span>
 			</div>
 
 			<p
 				class="mx-auto mb-12 max-w-xl font-body text-base leading-relaxed text-on-surface-variant opacity-80 md:text-lg lg:mx-0"
 			>
-				Architecting robust intelligence systems. Blending research-grade AI with production-ready
-				software engineering. Currently welcoming new R&D challenges from
-				<span class="font-semibold text-primary">OCT 2026</span>.
+				Spécialisé en intelligence artificielle et vision par ordinateur, 
+				je recherche un poste en développement ou en R&D <br />
+				à partir d'<span class="font-semibold text-primary">octobre 2026</span>.
 			</p>
 
 			<div class="flex justify-center gap-6 lg:justify-start">
@@ -53,7 +53,7 @@
 					href="#contact"
 					class="flex items-center gap-3 rounded-xl bg-primary px-10 py-4 text-on-primary transition-all hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(211,254,67,0.2)]"
 				>
-					<span class="font-headline text-sm font-bold tracking-widest uppercase">Get in touch</span
+					<span class="font-headline text-sm font-bold tracking-widest uppercase">Me contacter</span
 					>
 					<span class="material-symbols-outlined">arrow_forward</span>
 				</a>
@@ -63,16 +63,16 @@
 		<!-- Right: Video placeholder -->
 		<div class="group relative">
 			<div
-				class="absolute -inset-1 rounded-[2rem] bg-gradient-to-r from-primary to-secondary opacity-20 blur-2xl transition-opacity group-hover:opacity-30"
+				class="absolute -inset-1 from-primary to-secondary opacity-20 blur-2xl transition-opacity group-hover:opacity-30"
 			></div>
 			<div
 				class="relative aspect-video overflow-hidden rounded-3xl border border-white/10 bg-surface-container-highest shadow-2xl"
 			>
 				<div class="absolute inset-0 z-10 flex items-center justify-center bg-black/40">
 					<button
-						class="flex h-20 w-20 items-center justify-center rounded-full bg-primary/90 text-on-primary transition-transform hover:scale-110"
+						class="flex font-headline h-10 w-50 items-center justify-center rounded-full bg-primary/90 text-on-primary transition-transform hover:scale-110"
 					>
-						<span class="material-symbols-outlined text-4xl leading-none">play_arrow</span>
+						IN PROGRESS ⚒️
 					</button>
 				</div>
 				<img

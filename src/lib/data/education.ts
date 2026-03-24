@@ -5,24 +5,24 @@ export const education: EducationItem[] = [
 		index: '01',
 		isPrimary: true,
 		institution: 'ENSEEIHT',
-		credential: 'Engineering Degree',
+		credential: 'Diplôme d\'ingénieur en Informatique',
 		description:
-			'Computer Science & Applied Mathematics. Specialization in High Performance Computing and AI Architecture.'
+			'IA, Vision par Ordinateur, Web, Mathématiques appliquées, Programmation.'
 	},
 	{
 		index: '02',
 		isPrimary: false,
 		institution: 'CPGE HENRI WALLON',
-		credential: 'Preparatory Classes',
+		credential: 'Classe préparatoire aux grandes écoles en Mathématiques et Physique',
 		description:
-			'MPSI/MP* Intensive mathematics and physics track. Elite national curriculum for engineering preparation.'
+			'Mathématiques, Physique, Informatique (Python & Ocaml) - MPSI puis MP*'
 	},
 	{
 		index: '03',
 		isPrimary: false,
 		institution: 'BACCALAURÉAT',
-		credential: 'Scientific Mention',
+		credential: 'Mention très bien',
 		description:
-			'Graduated with Highest Honors (Félicitations du Jury). Strong foundation in analytical sciences.'
+			'Spécialités Mathématiques & Physique'
 	}
 ];

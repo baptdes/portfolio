@@ -10,7 +10,7 @@
 <section id="exp" class="bg-surface-container-low px-6 py-32">
 	<div class="mx-auto max-w-7xl">
 		<div class="mb-16">
-			<SectionHeader registry="Registry 01" title="PROFESSIONAL & TECHNICAL EXPERIENCE" />
+			<SectionHeader registry="Registry 01" title="EXPERIENCES PROFESSIONNELLES" />
 		</div>
 
 		<div class="grid grid-cols-1 gap-8">

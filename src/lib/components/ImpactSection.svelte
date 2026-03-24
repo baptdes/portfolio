@@ -6,7 +6,7 @@
 <section class="bg-surface px-6 py-32">
 	<div class="mx-auto max-w-7xl">
 		<div class="mb-16">
-			<SectionHeader registry="Registry 02" title="CREATIVE & INTERNATIONAL IMPACT" />
+			<SectionHeader registry="Registry 02" title="EXPERIENCES ASSOCIATIVES & INTERNATIONALES" />
 		</div>
 
 		<div class="grid grid-cols-1 gap-12 md:grid-cols-2">

@@ -2,11 +2,10 @@
 	import type { NavLink } from '$lib/types/portfolio';
 
 	const links: NavLink[] = [
-		{ label: 'ROOT', href: '#hero' },
-		{ label: 'EXP', href: '#exp' },
-		{ label: 'EDU', href: '#edu' },
-		{ label: 'STACK', href: '#stack' },
-		{ label: 'IO', href: '#contact' }
+		{ label: 'EXPERIENCES', href: '#exp' },
+		{ label: 'EDUCATION', href: '#edu' },
+		{ label: 'COMPETENCES', href: '#stack' },
+		{ label: 'CONTACT', href: '#contact' }
 	];
 
 	let activeSection = $state('hero');
@@ -14,8 +13,7 @@
 
 <nav class="fixed top-0 z-50 w-full border-b border-white/5 bg-neutral-950/40 backdrop-blur-xl">
 	<div class="mx-auto flex max-w-7xl items-center justify-between px-8 py-4">
-		<div class="font-headline text-xl font-bold tracking-tighter text-primary">B.DESNOUCK</div>
-
+		<a href="#hero" class="font-headline text-xl font-bold tracking-tighter text-primary">B.DESNOUCK</a>
 		<div class="hidden items-center gap-8 font-headline text-xs tracking-widest uppercase md:flex">
 			{#each links as link (link.href)}
 				<a
@@ -34,7 +32,7 @@
 			href="/resume.pdf"
 			class="scale-95 rounded-lg bg-primary px-6 py-2 font-headline text-xs font-bold tracking-widest text-on-primary uppercase transition-all duration-300 hover:opacity-90 active:scale-90"
 		>
-			RESUME
+			CV
 		</a>
 	</div>
 </nav>

@@ -6,8 +6,8 @@
 		{
 			icon: 'mail',
 			label: 'Email',
-			value: 'contact@baptistedesnouck.com',
-			href: 'mailto:contact@baptistedesnouck.com'
+			value: 'baptiste.desnouck@gmail.com',
+			href: 'mailto:baptiste.desnouck@gmail.com'
 		},
 		{
 			icon: 'location_city',
@@ -27,12 +27,11 @@
 						I/O PORT
 					</div>
 					<h2 class="font-headline text-5xl leading-none font-bold tracking-tight md:text-6xl">
-						LET'S BUILD THE <span class="primary-gradient-text">FUTURE.</span>
+						Construisons  <span class="primary-gradient-text">ENSEMBLE.</span>
 					</h2>
 				</div>
 				<p class="mb-12 max-w-md font-body text-lg text-on-surface-variant opacity-80">
-					Seeking collaborations on high-impact AI systems. Available for R&D roles starting late
-					2026.
+					Je recherche un poste en développement ou en R&D à partir d'octobre 2026.
 				</p>
 
 				<div class="space-y-8">
@@ -48,7 +47,7 @@
 
 				<div class="mt-12">
 					<a
-						href="mailto:contact@baptistedesnouck.com"
+						href="mailto:baptiste.desnouck@gmail.com"
 						class="inline-flex items-center gap-3 rounded-xl bg-primary px-10 py-5 font-headline text-sm font-bold tracking-[0.2em] text-on-primary uppercase transition-all hover:shadow-[0_10px_30px_rgba(211,254,67,0.3)]"
 					>
 						SEND AN EMAIL
@@ -74,11 +73,11 @@
 						</span>
 					</div>
 					<p class="font-headline text-lg font-bold tracking-[0.2em] text-on-surface uppercase">
-						Available from
+						Disponible à partir de
 					</p>
 					<p class="mt-2 font-headline text-4xl font-bold text-primary">OCT 2026</p>
 					<p class="mt-4 max-w-xs font-body text-sm text-on-surface-variant opacity-70">
-						Open to R&D roles, research collaborations, and high-impact AI engineering missions.
+						Ouvert à des roles de développement et/ou de R&D.
 					</p>
 				</div>
 			</div>

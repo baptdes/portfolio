@@ -6,7 +6,7 @@
 <section id="edu" class="bg-surface-dim px-6 py-32">
 	<div class="mx-auto max-w-7xl">
 		<div class="mb-20">
-			<SectionHeader title="Academic Foundation" align="center" />
+			<SectionHeader title="EDUCATION" align="center" />
 		</div>
 
 		<div class="grid grid-cols-1 gap-12 md:grid-cols-3">

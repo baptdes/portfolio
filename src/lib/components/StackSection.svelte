@@ -6,7 +6,7 @@
 <section id="stack" class="bg-surface-container-low px-6 py-32">
 	<div class="mx-auto max-w-7xl">
 		<div class="mb-20">
-			<SectionHeader title="TECH REGISTRY" subtitle="Production & Research Stack" />
+			<SectionHeader title="COMPETENCES" subtitle="Soft and Technical Skills" />
 		</div>
 
 		<div class="grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-6">
@@ -44,7 +44,7 @@
 				{:else}
 					<!-- Wide card: Autonomous Systems -->
 					<div
-						class="flex flex-col items-center gap-10 rounded-2xl border border-primary/10 bg-surface-container-highest p-10 md:col-span-4 md:flex-row lg:col-span-6"
+						class="flex flex-col items-center gap-10 rounded-2xl border border-primary/10 bg-surface-container-low p-10 md:col-span-4 md:flex-row lg:col-span-6"
 					>
 						<div class="flex-shrink-0">
 							<div class="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">

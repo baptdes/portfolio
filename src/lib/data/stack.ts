@@ -5,12 +5,11 @@ export const stack: StackCategory[] = [
 		variant: 'grid',
 		icon: 'psychology',
 		iconColor: 'primary',
-		title: 'AI / ML Core',
+		title: 'AI / ML',
 		gridItems: [
 			{ category: 'Deep Learning', items: 'PyTorch, TensorFlow' },
 			{ category: 'Vision', items: 'OpenCV, YOLO, SAM' },
-			{ category: 'Languages', items: 'Python, C++' },
-			{ category: 'Analytics', items: 'Pandas, Scikit-learn' }
+			{ category: 'Langages', items: 'Python, C++' }
 		]
 	},
 	{
@@ -19,19 +18,19 @@ export const stack: StackCategory[] = [
 		iconColor: 'secondary',
 		title: 'Fullstack / UI',
 		gridItems: [
-			{ category: 'Frameworks', items: 'Svelte, React' },
+			{ category: 'Frameworks', items: 'Svelte' },
 			{ category: 'Styling', items: 'Tailwind CSS' },
-			{ category: 'Runtime', items: 'Node.js, Bun' },
-			{ category: 'Database', items: 'Postgres, Redis' }
+			{ category: 'Database', items: 'PostgreSQL' },
+			{ category: 'Backend', items: 'SvelteKit, SpringBoot' }
 		]
 	},
 	{
 		variant: 'wide',
 		icon: 'robot_2',
 		iconColor: 'primary',
-		title: 'Autonomous Systems & Agents',
+		title: 'Agents IA',
 		description:
-			'Implementing agentic workflows with Claude Code and LangGraph. Specialized in technical RAG architectures and autonomous developer tooling.',
-		decorativeIcons: ['model_training', 'monitoring', 'schema']
+			'Je me tiens à jour sur les dernières avancées en matière d\'agents IA et je suis capable d\'en utiliser à leurs pleines capacités sur certains de mes projets et dans mon travail.',
+		decorativeIcons: []
 	}
 ];
