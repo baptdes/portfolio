@@ -1,3 +1,5 @@
+import {type LucideIcon} from '@lucide/svelte';
+
 export interface ExperienceItem {
 	variant: 'featured' | 'compact';
 	company: string;
@@ -35,12 +37,12 @@ export interface StackSubItem {
 
 export interface StackCategory {
 	variant: 'grid' | 'wide';
-	icon: string;
+	icon: LucideIcon;
 	iconColor: 'primary' | 'secondary';
 	title: string;
 	gridItems?: StackSubItem[];
 	description?: string;
-	decorativeIcons?: string[];
+	decorativeIcons?: LucideIcon[];
 }
 
 export interface NavLink {
@@ -49,7 +51,7 @@ export interface NavLink {
 }
 
 export interface ContactInfoItem {
-	icon: string;
+	icon: LucideIcon;
 	label: string;
 	value: string;
 	href?: string;

@@ -1,9 +1,10 @@
+import { Activity, Bot, Brain, GitGraph, Network, Terminal } from 'lucide-svelte';
 import type { StackCategory } from '$lib/types/portfolio';
 
 export const stack: StackCategory[] = [
 	{
 		variant: 'grid',
-		icon: 'psychology',
+		icon: Brain,
 		iconColor: 'primary',
 		title: 'AI / ML',
 		gridItems: [
@@ -14,7 +15,7 @@ export const stack: StackCategory[] = [
 	},
 	{
 		variant: 'grid',
-		icon: 'terminal',
+		icon: Terminal,
 		iconColor: 'secondary',
 		title: 'Fullstack / UI',
 		gridItems: [
@@ -26,11 +27,11 @@ export const stack: StackCategory[] = [
 	},
 	{
 		variant: 'wide',
-		icon: 'robot_2',
+		icon: Bot,
 		iconColor: 'primary',
 		title: 'Agents IA',
 		description:
-			'Je me tiens à jour sur les dernières avancées en matière d\'agents IA et je suis capable d\'en utiliser à leurs pleines capacités sur certains de mes projets et dans mon travail.',
-		decorativeIcons: []
+			"Je me tiens à jour sur les dernières avancées en matière d'agents IA et je suis capable d'en utiliser à leurs pleines capacités sur certains de mes projets et dans mon travail.",
+		decorativeIcons: [GitGraph, Activity, Network]
 	}
 ];

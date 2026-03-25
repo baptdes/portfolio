@@ -12,16 +12,15 @@
 		<div class="grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-6">
 			{#each stack as category (category.title)}
 				{#if category.variant === 'grid'}
+					{@const Icon = category.icon}
 					<div
 						class="rounded-2xl border border-white/5 bg-surface-container-highest p-10 md:col-span-2 lg:col-span-3"
 					>
 						<div class="mb-10 flex items-center gap-4">
-							<span
-								class="material-symbols-outlined text-4xl {category.iconColor === 'primary'
-									? 'text-primary'
-									: 'text-secondary'}">{category.icon}</span
-							>
-							<h3 class="font-headline text-2xl font-bold tracking-tight uppercase">
+							<div class={category.iconColor === 'primary' ? 'text-primary' : 'text-secondary'}>
+								<Icon size={36} />
+							</div>
+							<h3 class="font-headline text-2xl font-bold uppercase tracking-tight">
 								{category.title}
 							</h3>
 						</div>
@@ -29,7 +28,7 @@
 							{#each category.gridItems ?? [] as sub (sub.category)}
 								<div>
 									<div
-										class="mb-1 font-label text-[10px] tracking-widest uppercase opacity-70 {category.iconColor ===
+										class="mb-1 font-label text-[10px] uppercase tracking-widest opacity-70 {category.iconColor ===
 										'primary'
 											? 'text-primary'
 											: 'text-secondary'}"
@@ -42,22 +41,20 @@
 						</div>
 					</div>
 				{:else}
-					<!-- Wide card: Autonomous Systems -->
+					{@const Icon = category.icon}
+					<!-- Wide card: Agents IA -->
 					<div
 						class="flex flex-col items-center gap-10 rounded-2xl border border-primary/10 bg-surface-container-low p-10 md:col-span-4 md:flex-row lg:col-span-6"
 					>
 						<div class="flex-shrink-0">
-							<div class="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
-								<span
-									class="material-symbols-outlined text-4xl text-primary"
-									style="font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24"
-								>
-									{category.icon}
-								</span>
+							<div
+								class="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary"
+							>
+								<Icon size={36} />
 							</div>
 						</div>
 						<div class="flex-grow">
-							<h3 class="mb-2 font-headline text-xl font-bold tracking-[0.2em] uppercase">
+							<h3 class="mb-2 font-headline text-xl font-bold uppercase tracking-[0.2em]">
 								{category.title}
 							</h3>
 							<p class="max-w-2xl font-body text-sm text-on-surface-variant opacity-80">
@@ -65,9 +62,9 @@
 							</p>
 						</div>
 						{#if category.decorativeIcons}
-							<div class="flex gap-6 opacity-40">
-								{#each category.decorativeIcons as icon, i (i)}
-									<span class="material-symbols-outlined">{icon}</span>
+							<div class="flex gap-6 text-on-surface-variant opacity-40">
+								{#each category.decorativeIcons as DecorIcon, i (i)}
+									<DecorIcon size={20} />
 								{/each}
 							</div>
 						{/if}

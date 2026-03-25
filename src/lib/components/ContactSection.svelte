@@ -1,16 +1,17 @@
 <script lang="ts">
+	import { Building2, Mail, Send, Zap } from 'lucide-svelte';
 	import { type ContactInfoItem } from '$lib/types/portfolio';
 	import ContactInfoRow from '$lib/components/ui/ContactInfoRow.svelte';
 
 	const contactInfo: ContactInfoItem[] = [
 		{
-			icon: 'mail',
+			icon: Mail,
 			label: 'Email',
 			value: 'baptiste.desnouck@gmail.com',
 			href: 'mailto:baptiste.desnouck@gmail.com'
 		},
 		{
-			icon: 'location_city',
+			icon: Building2,
 			label: 'Base',
 			value: 'Toulouse, France'
 		}
@@ -23,11 +24,11 @@
 			<!-- Left: headline + contact info -->
 			<div>
 				<div class="mb-8">
-					<div class="mb-4 font-headline text-xs tracking-[0.5em] text-primary uppercase">
+					<div class="mb-4 font-headline text-xs uppercase tracking-[0.5em] text-primary">
 						I/O PORT
 					</div>
-					<h2 class="font-headline text-5xl leading-none font-bold tracking-tight md:text-6xl">
-						Construisons  <span class="primary-gradient-text">ENSEMBLE.</span>
+					<h2 class="font-headline text-5xl font-bold leading-none tracking-tight md:text-6xl">
+						Construisons <span class="primary-gradient-text">ENSEMBLE.</span>
 					</h2>
 				</div>
 				<p class="mb-12 max-w-md font-body text-lg text-on-surface-variant opacity-80">
@@ -48,10 +49,10 @@
 				<div class="mt-12">
 					<a
 						href="mailto:baptiste.desnouck@gmail.com"
-						class="inline-flex items-center gap-3 rounded-xl bg-primary px-10 py-5 font-headline text-sm font-bold tracking-[0.2em] text-on-primary uppercase transition-all hover:shadow-[0_10px_30px_rgba(211,254,67,0.3)]"
+						class="inline-flex items-center gap-3 rounded-xl bg-primary px-10 py-5 font-headline text-sm font-bold uppercase tracking-[0.2em] text-on-primary transition-all hover:shadow-[0_10px_30px_rgba(211,254,67,0.3)]"
 					>
 						SEND AN EMAIL
-						<span class="material-symbols-outlined text-sm">send</span>
+						<Send size={16} />
 					</a>
 				</div>
 			</div>
@@ -60,19 +61,14 @@
 			<div
 				class="relative flex min-h-64 items-center justify-center overflow-hidden rounded-3xl border border-white/5 bg-surface-container-low p-8 shadow-2xl md:p-12"
 			>
-				<div class="absolute top-0 right-0 h-32 w-32 rounded-full bg-primary/5 blur-3xl"></div>
+				<div class="absolute right-0 top-0 h-32 w-32 rounded-full bg-primary/5 blur-3xl"></div>
 				<div class="relative z-10 text-center">
 					<div
-						class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-primary/10"
+						class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 text-primary"
 					>
-						<span
-							class="material-symbols-outlined text-4xl text-primary"
-							style="font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24"
-						>
-							bolt
-						</span>
+						<Zap size={36} />
 					</div>
-					<p class="font-headline text-lg font-bold tracking-[0.2em] text-on-surface uppercase">
+					<p class="font-headline text-lg font-bold uppercase tracking-[0.2em] text-on-surface">
 						Disponible à partir de
 					</p>
 					<p class="mt-2 font-headline text-4xl font-bold text-primary">OCT 2026</p>

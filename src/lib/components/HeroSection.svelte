@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { ArrowRight, MapPin } from 'lucide-svelte';
+
 	const videoPlaceholderUrl =
 		'https://art.ngfiles.com/images/2061000/2061047_dbotnewgrounds_send-this-to-a-friend-who-says-a-joke-thats-not-funny-3.jpg?f1630968013';
 </script>
@@ -18,7 +20,7 @@
 			<div
 				class="mb-10 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 font-headline text-[10px] tracking-[0.3em] text-primary uppercase"
 			>
-				<span class="material-symbols-outlined text-[14px]">my_location</span>
+				<MapPin size={14} />
 				Toulouse, France
 			</div>
 
@@ -57,7 +59,7 @@
 				>
 					<span class="font-headline text-sm font-bold tracking-widest uppercase">Me contacter</span
 					>
-					<span class="material-symbols-outlined">arrow_forward</span>
+					<ArrowRight size={20} />
 				</a>
 			</div>
 		</div>

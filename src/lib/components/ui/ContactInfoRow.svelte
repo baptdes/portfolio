@@ -1,11 +1,13 @@
 <script lang="ts">
+	import type { Component } from 'svelte';
+
 	let {
 		icon,
 		label,
 		value,
 		href
 	}: {
-		icon: string;
+		icon: Component;
 		label: string;
 		value: string;
 		href?: string;
@@ -18,11 +20,15 @@
 			? 'group-hover:bg-primary'
 			: ''}"
 	>
-		<span class="material-symbols-outlined {href ? 'group-hover:text-on-primary' : ''}">{icon}</span
-		>
+		<div class="text-on-surface-variant {href ? 'group-hover:text-on-primary' : ''}">
+			{#if icon}
+				{@const Icon = icon}
+				<Icon size={20} />
+			{/if}
+		</div>
 	</div>
 	<div>
-		<div class="mb-1 font-label text-[10px] tracking-[0.2em] text-on-surface-variant uppercase">
+		<div class="mb-1 font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">
 			{label}
 		</div>
 		{#if href}
