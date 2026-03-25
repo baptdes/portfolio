@@ -2,6 +2,7 @@
 	import { experiences } from '$lib/data/experience';
 	import SectionHeader from '$lib/components/ui/SectionHeader.svelte';
 	import ExperienceCard from '$lib/components/ui/ExperienceCard.svelte';
+	import TagChip from '$lib/components/ui/TagChip.svelte';
 
 	const featured = experiences.find((e) => e.variant === 'featured')!;
 	const compact = experiences.filter((e) => e.variant === 'compact');
@@ -44,7 +45,7 @@
 							{featured.period}
 						</div>
 					</div>
-					<ul class="max-w-xl space-y-4 font-body text-sm leading-relaxed text-on-surface/80">
+					<ul class="mb-8 max-w-xl space-y-4 font-body text-sm leading-relaxed text-on-surface/80">
 						{#each featured.bullets ?? [] as bullet, i (i)}
 							<li class="flex gap-4">
 								<span class="text-primary">/</span>
@@ -52,6 +53,13 @@
 							</li>
 						{/each}
 					</ul>
+					{#if featured.tags && featured.tags.length > 0}
+						<div class="flex flex-wrap gap-2">
+							{#each featured.tags as tag (tag)}
+								<TagChip label={tag} />
+							{/each}
+						</div>
+					{/if}
 				</div>
 			</div>
 

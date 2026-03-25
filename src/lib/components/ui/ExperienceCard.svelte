@@ -16,12 +16,19 @@
 		/>
 	</div>
 	<div class="flex flex-grow flex-col p-8">
-		<h3 class="mb-1 font-headline text-xl font-bold text-primary uppercase">{item.company}</h3>
-		<p
-			class="mb-6 font-label text-[10px] tracking-widest text-on-surface-variant uppercase opacity-70"
-		>
-			{item.role}
-		</p>
+		<div class="mb-6 flex flex-col justify-between gap-1 md:flex-row md:items-start">
+			<div>
+				<h3 class="mb-1 font-headline text-xl font-bold text-primary uppercase">{item.company}</h3>
+				<p class="font-label text-[10px] tracking-widest text-on-surface-variant uppercase opacity-70">
+					{item.role}
+				</p>
+			</div>
+			{#if item.period}
+				<p class="font-label text-[10px] tracking-widest text-on-surface-variant uppercase opacity-60">
+					{item.period}
+				</p>
+			{/if}
+		</div>
 		<p class="mb-6 flex-grow font-body text-sm leading-relaxed text-on-surface/80">
 			{item.description}
 		</p>

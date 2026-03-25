@@ -13,13 +13,14 @@ export const experiences: ExperienceItem[] = [
 			"Développement de modules IA appliqués à l'imagerie géospatiale.",
 			'Optimisation de données satellites pour deep learning.',
 			'Déploiement en environnement cloud R&D'
-		]
+		],
+		tags: ['Python', 'PyTorch', 'Computer Vision', 'Cloud']
 	},
 	{
 		variant: 'compact',
 		company: 'UP2SMART',
 		role: 'Stagière en recherche IA',
-		period: '',
+		period: 'JUIN 2025 — AOUT 2025',
 		imageUrl:
 			'https://github.com/baptdes/YOLOx3D/raw/main/images_geo.png',
 		imageAlt: "Résultats de détection d'objets 3D à partir d'une image monoculaire",
@@ -31,7 +32,7 @@ export const experiences: ExperienceItem[] = [
 		variant: 'compact',
 		company: 'N7 Consulting',
 		role: 'Responsable des Services Informatiques',
-		period: '',
+		period: 'MARS 2024 — MARS 2025',
 		imageUrl:
 			'https://cdn.prod.website-files.com/67a9fca34d150f14e73d9ba7/67a9fe01c0749a737a00f77e_Logo_N7C_classic_fond_bleu.png',
 		imageAlt: 'Logo de N7 Consulting, une junior entreprise',
