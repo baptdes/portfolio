@@ -55,5 +55,6 @@ export interface ContactInfoItem {
 	icon: Component | LucideIcon;
 	label: string;
 	value: string;
+	subtitle?: string;
 	href?: string;
 }

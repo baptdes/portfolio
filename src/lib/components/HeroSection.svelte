@@ -21,7 +21,7 @@
 				class="mb-10 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 font-headline text-[10px] tracking-[0.3em] text-primary uppercase"
 			>
 				<MapPin size={14} />
-				Toulouse, France
+				Toulouse, France · Mobile France
 			</div>
 
 			<h1

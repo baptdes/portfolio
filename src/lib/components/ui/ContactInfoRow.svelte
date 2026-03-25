@@ -5,11 +5,13 @@
 		icon,
 		label,
 		value,
+		subtitle,
 		href
 	}: {
 		icon: Component;
 		label: string;
 		value: string;
+		subtitle?: string;
 		href?: string;
 	} = $props();
 </script>
@@ -32,11 +34,16 @@
 			{label}
 		</div>
 		{#if href}
-			<a {href} class="font-headline text-lg font-bold transition-colors hover:text-primary">
+			<a href={href} class="font-headline text-lg font-bold transition-colors hover:text-primary">
 				{value}
 			</a>
 		{:else}
 			<div class="font-headline text-lg font-bold">{value}</div>
+		{/if}
+		{#if subtitle}
+			<div class="mt-0.5 font-label text-[9px] uppercase tracking-[0.2em] text-on-surface-variant opacity-50">
+				{subtitle}
+			</div>
 		{/if}
 	</div>
 </div>

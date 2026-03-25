@@ -14,8 +14,9 @@
 		},
 		{
 			icon: Building2,
-			label: 'Base',
+			label: 'Localisation',
 			value: 'TOULOUSE, FRANCE',
+			subtitle: 'MOBILITÉ SUR TOUTE LA FRANCE'
 		},
 		{
 			icon: LinkedinIcon,
@@ -55,6 +56,7 @@
 							icon={info.icon}
 							label={info.label}
 							value={info.value}
+							subtitle={info.subtitle}
 							href={info.href}
 						/>
 					{/each}
