@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { Building2, Mail, Send, Zap } from 'lucide-svelte';
+	import GithubIcon from '$lib/components/icons/GithubIcon.svelte';
+	import LinkedinIcon from '$lib/components/icons/LinkedinIcon.svelte';
 	import { type ContactInfoItem } from '$lib/types/portfolio';
 	import ContactInfoRow from '$lib/components/ui/ContactInfoRow.svelte';
 
@@ -14,13 +16,25 @@
 			icon: Building2,
 			label: 'Base',
 			value: 'Toulouse, France'
+		},
+		{
+			icon: LinkedinIcon,
+			label: 'LinkedIn',
+			value: 'Baptiste Desnouck',
+			href: 'https://www.linkedin.com/in/baptiste-desnouck'
+		},
+		{
+			icon: GithubIcon,
+			label: 'GitHub',
+			value: 'Nimdaba',
+			href: 'https://github.com/baptdes'
 		}
 	];
 </script>
 
 <section id="contact" class="relative overflow-hidden bg-surface px-6 py-32">
 	<div class="mx-auto max-w-7xl">
-		<div class="grid grid-cols-1 items-center gap-20 lg:grid-cols-2">
+		<div class="grid grid-cols-1 items-center gap-20 lg:grid-cols-[2fr_1fr]">
 			<!-- Left: headline + contact info -->
 			<div>
 				<div class="mb-8">
@@ -35,7 +49,7 @@
 					Je recherche un poste en développement ou en R&D à partir d'octobre 2026.
 				</p>
 
-				<div class="space-y-8">
+				<div class="grid grid-cols-2 gap-6">
 					{#each contactInfo as info (info.label)}
 						<ContactInfoRow
 							icon={info.icon}
@@ -59,20 +73,20 @@
 
 			<!-- Right: decorative panel -->
 			<div
-				class="relative flex min-h-64 items-center justify-center overflow-hidden rounded-3xl border border-white/5 bg-surface-container-low p-8 shadow-2xl md:p-12"
+				class="relative flex items-center justify-center overflow-hidden rounded-3xl border border-white/5 bg-surface-container-low p-8 shadow-2xl"
 			>
-				<div class="absolute right-0 top-0 h-32 w-32 rounded-full bg-primary/5 blur-3xl"></div>
+				<div class="absolute right-0 top-0 h-24 w-24 rounded-full bg-primary/5 blur-3xl"></div>
 				<div class="relative z-10 text-center">
 					<div
-						class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 text-primary"
+						class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary"
 					>
-						<Zap size={36} />
+						<Zap size={28} />
 					</div>
-					<p class="font-headline text-lg font-bold uppercase tracking-[0.2em] text-on-surface">
+					<p class="font-headline text-sm font-bold uppercase tracking-[0.2em] text-on-surface">
 						Disponible à partir de
 					</p>
-					<p class="mt-2 font-headline text-4xl font-bold text-primary">OCT 2026</p>
-					<p class="mt-4 max-w-xs font-body text-sm text-on-surface-variant opacity-70">
+					<p class="mt-1 font-headline text-3xl font-bold text-primary">OCT 2026</p>
+					<p class="mt-3 max-w-xs font-body text-xs text-on-surface-variant opacity-70">
 						Ouvert à des roles de développement et/ou de R&D.
 					</p>
 				</div>

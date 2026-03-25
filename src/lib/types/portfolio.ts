@@ -1,3 +1,4 @@
+import type { Component } from 'svelte';
 import {type LucideIcon} from '@lucide/svelte';
 
 export interface ExperienceItem {
@@ -51,7 +52,7 @@ export interface NavLink {
 }
 
 export interface ContactInfoItem {
-	icon: LucideIcon;
+	icon: Component | LucideIcon;
 	label: string;
 	value: string;
 	href?: string;
