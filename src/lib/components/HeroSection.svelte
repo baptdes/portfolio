@@ -5,10 +5,12 @@
 
 <section
 	id="hero"
-	class="soft-grain relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6"
+	class="hero-gradient relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6"
 >
-	<!-- Background gradient -->
-	<div class="hero-gradient pointer-events-none absolute inset-0 opacity-60"></div>
+	<!-- Ambient glow -->
+	<div class="pointer-events-none absolute inset-0 opacity-10">
+		<div class="absolute left-1/4 top-1/4 h-96 w-96 rounded-full bg-primary blur-[120px]"></div>
+	</div>
 
 	<div class="z-10 grid w-full max-w-7xl grid-cols-1 items-center gap-12 py-20 lg:grid-cols-2">
 		<!-- Left: Text content -->
@@ -87,6 +89,28 @@
 						Video Intro // 0:45
 					</div>
 				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Key metrics -->
+	<div class="z-10 mb-12 grid w-full max-w-5xl grid-cols-2 gap-4 px-6 opacity-50 md:grid-cols-3">
+		<div class="text-center">
+			<div class="font-headline text-2xl font-bold text-primary">New graduate</div>
+			<div class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">
+				Status
+			</div>
+		</div>
+		<div class="border-l border-outline-variant/20 text-center">
+			<div class="font-headline text-2xl font-bold text-primary">AI/CV</div>
+			<div class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">
+				Spécialisation
+			</div>
+		</div>
+		<div class="border-l border-outline-variant/20 text-center">
+			<div class="font-headline text-2xl font-bold text-primary">Oct 26</div>
+			<div class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">
+				Availability
 			</div>
 		</div>
 	</div>

@@ -97,16 +97,6 @@
 }
 
 @layer utilities {
-	.soft-grain {
-		background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB9E_qzRxIrJtYnKJZd-h1Td6PNwBn664kRsdb4N4xmGH1Qdx8Yt74VLdmZ8RECkD1C5tQveJfskcscrcS7EXhjE0gQYkL6dtqDGd9ucgxXZ_iDPpu8m0GFEu5e-GJ6vVoxBNSGPMMHk_pkYj0Af-x_shZb8rm_jdBGAuUZqn-dZSyyYy_yME_hPpyHCxXCLxNKwTl1-tmvgPk4QucBfccaKvr2wk3xf2qEOkPKaTaWaERcM0y1hw9b98lGJHTtf_QbbBi0FLCmy6iI');
-		background-color: #0c0f0f;
-	}
-
-	.glass-effect {
-		backdrop-filter: blur(12px);
-		-webkit-backdrop-filter: blur(12px);
-	}
-
 	.primary-gradient-text {
 		background: linear-gradient(135deg, #d3fe43 0%, #a8d000 100%);
 		-webkit-background-clip: text;
