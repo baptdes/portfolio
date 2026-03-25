@@ -36,7 +36,7 @@
 				{value}
 			</a>
 		{:else}
-			<div class="font-headline text-lg font-bold uppercase">{value}</div>
+			<div class="font-headline text-lg font-bold">{value}</div>
 		{/if}
 	</div>
 </div>

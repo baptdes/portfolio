@@ -7,7 +7,7 @@ export const impacts: ImpactItem[] = [
 		badgeLabel: 'International',
 		badgeVariant: 'neutral',
 		imageUrl:
-			'https://lh3.googleusercontent.com/aida-public/AB6AXuAIkyFewEST3HY-XHFX1bKS89Q5aezGJhU1FpxwsKmbG6gi_FVG8WbRtylQ_ryWLeUMiWm9AyTixOh8uSRNAmak30i7VAZpxgGUFsIAETW7op5SHxNkHjfAg7bNaRWhoxDprGfN5Q3UMTfMXpdblrAyaggs2QHIk_lRVEHbpP4BgtR9F5njlXmEjgKySJ344USBP_fyUKu57CEB3POP63GJZmDMYINrZ8Og2DjM-dw75gXSbm6CnOKbOZNR21FJ6xZ9AlRDjfEzdvJH',
+			'/images/tea_japan.webp',
 		imageAlt: 'Serene traditional Japanese tea room with garden view',
 		description:
 			'Expérience en hôtellerie combiné avec un stage linguistique au coeur de la culture japonaise.'

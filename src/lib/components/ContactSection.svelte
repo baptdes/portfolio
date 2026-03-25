@@ -15,7 +15,7 @@
 		{
 			icon: Building2,
 			label: 'Base',
-			value: 'Toulouse, France'
+			value: 'TOULOUSE, FRANCE',
 		},
 		{
 			icon: LinkedinIcon,
