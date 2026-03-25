@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onMount, onDestroy } from 'svelte';
 	import type { NavLink } from '$lib/types/portfolio';
 
 	const links: NavLink[] = [
@@ -9,6 +10,24 @@
 	];
 
 	let activeSection = $state('hero');
+	let observer: IntersectionObserver;
+
+	onMount(() => {
+		const sections = document.querySelectorAll('#hero, #exp, #edu, #stack, #contact');
+		observer = new IntersectionObserver(
+			(entries) => {
+				for (const entry of entries) {
+					if (entry.isIntersecting) {
+						activeSection = entry.target.id;
+					}
+				}
+			},
+			{ rootMargin: '-40% 0px -55% 0px', threshold: 0 }
+		);
+		sections.forEach((el) => observer.observe(el));
+	});
+
+	onDestroy(() => observer?.disconnect());
 </script>
 
 <nav class="fixed top-0 z-50 w-full border-b border-white/5 bg-neutral-950/40 backdrop-blur-xl">
