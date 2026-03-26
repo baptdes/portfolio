@@ -1,8 +1,5 @@
 <script lang="ts">
 	import { ArrowRight, MapPin } from 'lucide-svelte';
-
-	const videoPlaceholderUrl =
-		'https://art.ngfiles.com/images/2061000/2061047_dbotnewgrounds_send-this-to-a-friend-who-says-a-joke-thats-not-funny-3.jpg?f1630968013';
 </script>
 
 <section
@@ -79,11 +76,7 @@
 						IN PROGRESS ⚒️
 					</button>
 				</div>
-				<img
-					src={videoPlaceholderUrl}
-					alt="Video Placeholder Background"
-					class="h-full w-full object-cover opacity-60"
-				/>
+				<div class="h-full w-full bg-surface-container-highest"></div>
 				<div class="absolute bottom-6 left-6 z-20">
 					<div
 						class="rounded bg-black/60 px-3 py-1 font-headline text-[10px] tracking-widest text-white uppercase backdrop-blur-md"
