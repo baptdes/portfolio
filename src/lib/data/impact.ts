@@ -3,14 +3,14 @@ import type { ImpactItem } from '$lib/types/portfolio';
 export const impacts: ImpactItem[] = [
 	{
 		title: 'CARRO FORESTA',
-		subtitle: 'Stage linguistique - Employé polyvalent en hotellerie',
+		subtitle: 'Stage linguistique - Employé polyvalent en hôtellerie',
 		badgeLabel: 'International',
 		badgeVariant: 'neutral',
 		imageUrl:
 			'/images/tea_japan.webp',
 		imageAlt: 'Serene traditional Japanese tea room with garden view',
 		description:
-			'Expérience en hôtellerie combiné avec un stage linguistique au coeur de la culture japonaise.'
+			'Expérience en hôtellerie combinée avec un stage linguistique au cœur de la culture japonaise.'
 	},
 	{
 		title: 'WOMEN7',

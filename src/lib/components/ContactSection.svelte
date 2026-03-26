@@ -89,7 +89,7 @@
 					</p>
 					<p class="mt-1 font-headline text-3xl font-bold text-primary">OCT 2026</p>
 					<p class="mt-3 max-w-xs font-body text-xs text-on-surface-variant opacity-70">
-						Ouvert à des roles de développement et/ou de R&D.
+						Ouvert à des rôles de développement et/ou de R&D.
 					</p>
 				</div>
 			</div>

@@ -19,8 +19,8 @@ export const experiences: ExperienceItem[] = [
 	{
 		variant: 'compact',
 		company: 'UP2SMART',
-		role: 'Stagière en recherche IA',
-		period: 'JUIN 2025 — AOUT 2025',
+		role: 'Stagiaire en recherche IA',
+		period: 'JUIN 2025 — AOÛT 2025',
 		imageUrl:
 			'https://github.com/baptdes/YOLOx3D/raw/main/images_geo.png',
 		imageAlt: "Résultats de détection d'objets 3D à partir d'une image monoculaire",
