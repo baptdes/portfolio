@@ -7,6 +7,9 @@
 	import StackSection from '$lib/components/StackSection.svelte';
 	import ContactSection from '$lib/components/ContactSection.svelte';
 	import FooterSection from '$lib/components/FooterSection.svelte';
+	import type { ActionData } from './$types';
+
+	const { form }: { form: ActionData } = $props();
 </script>
 
 <NavBar />
@@ -16,6 +19,6 @@
 	<ImpactSection />
 	<EducationSection />
 	<StackSection />
-	<ContactSection />
+	<ContactSection {form} />
 </main>
 <FooterSection />

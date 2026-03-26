@@ -4,6 +4,19 @@
 	import LinkedinIcon from '$lib/components/icons/LinkedinIcon.svelte';
 	import { type ContactInfoItem } from '$lib/types/portfolio';
 	import ContactInfoRow from '$lib/components/ui/ContactInfoRow.svelte';
+	import { enhance } from '$app/forms';
+
+	type FormResult = {
+		success?: boolean;
+		error?: string;
+		name?: string;
+		email?: string;
+		message?: string;
+	} | null;
+
+	const { form }: { form: FormResult } = $props();
+
+	let sending = $state(false);
 
 	const contactInfo: ContactInfoItem[] = [
 		{
@@ -61,37 +74,98 @@
 						/>
 					{/each}
 				</div>
-
-				<div class="mt-12">
-					<a
-						href="mailto:baptiste.desnouck@gmail.com"
-						class="inline-flex items-center gap-3 rounded-xl bg-primary px-10 py-5 font-headline text-sm font-bold uppercase tracking-[0.2em] text-on-primary transition-all hover:shadow-[0_10px_30px_rgba(211,254,67,0.3)]"
-					>
-						SEND AN EMAIL
-						<Send size={16} />
-					</a>
-				</div>
 			</div>
 
-			<!-- Right: decorative panel -->
+			<!-- Right: contact form -->
 			<div
-				class="relative flex items-center justify-center overflow-hidden rounded-3xl border border-white/5 bg-surface-container-low p-8 shadow-2xl"
+				class="relative overflow-hidden rounded-3xl border border-white/5 bg-surface-container-low p-8 shadow-2xl"
 			>
 				<div class="absolute right-0 top-0 h-24 w-24 rounded-full bg-primary/5 blur-3xl"></div>
-				<div class="relative z-10 text-center">
-					<div
-						class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary"
-					>
-						<Zap size={28} />
+
+				{#if form?.success}
+					<div class="relative z-10 flex flex-col items-center justify-center gap-4 py-12 text-center">
+						<div class="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+							<Zap size={28} />
+						</div>
+						<p class="font-headline text-lg font-bold text-on-surface">Message envoyé !</p>
+						<p class="font-body text-sm text-on-surface-variant opacity-70">
+							Je vous répondrai dans les plus brefs délais.
+						</p>
 					</div>
-					<p class="font-headline text-sm font-bold uppercase tracking-[0.2em] text-on-surface">
-						Disponible à partir de
-					</p>
-					<p class="mt-1 font-headline text-3xl font-bold text-primary">OCT 2026</p>
-					<p class="mt-3 max-w-xs font-body text-xs text-on-surface-variant opacity-70">
-						Ouvert à des rôles de développement et/ou de R&D.
-					</p>
-				</div>
+				{:else}
+					<form
+						method="POST"
+						action="?/contact"
+						use:enhance={() => {
+							sending = true;
+							return async ({ update }) => {
+								await update();
+								sending = false;
+							};
+						}}
+						class="relative z-10 flex flex-col gap-4"
+					>
+						{#if form?.error}
+							<p class="rounded-lg bg-red-500/10 px-4 py-2 font-body text-xs text-red-400">
+								{form.error}
+							</p>
+						{/if}
+
+						<div class="flex flex-col gap-1">
+							<label for="name" class="font-headline text-xs uppercase tracking-widest text-on-surface-variant">
+								Nom
+							</label>
+							<input
+								id="name"
+								name="name"
+								type="text"
+								required
+								value={form?.name ?? ''}
+								placeholder="Jack Law"
+								class="rounded-xl bg-surface-container px-4 py-3 font-body text-sm text-on-surface placeholder:text-on-surface-variant/40 outline-none ring-1 ring-white/5 transition focus:ring-primary"
+							/>
+						</div>
+
+						<div class="flex flex-col gap-1">
+							<label for="email" class="font-headline text-xs uppercase tracking-widest text-on-surface-variant">
+								Email
+							</label>
+							<input
+								id="email"
+								name="email"
+								type="email"
+								required
+								value={form?.email ?? ''}
+								placeholder="you@example.com"
+								class="rounded-xl bg-surface-container px-4 py-3 font-body text-sm text-on-surface placeholder:text-on-surface-variant/40 outline-none ring-1 ring-white/5 transition focus:ring-primary"
+							/>
+						</div>
+
+						<div class="flex flex-col gap-1">
+							<label for="message" class="font-headline text-xs uppercase tracking-widest text-on-surface-variant">
+								Message
+							</label>
+							<textarea
+								id="message"
+								name="message"
+								required
+								rows="4"
+								value={form?.message ?? ''}
+								placeholder="Votre message..."
+								class="resize-none rounded-xl bg-surface-container px-4 py-3 font-body text-sm text-on-surface placeholder:text-on-surface-variant/40 outline-none ring-1 ring-white/5 transition focus:ring-primary"
+							></textarea>
+						</div>
+
+						<button
+							type="submit"
+							disabled={sending}
+							class="mt-2 inline-flex items-center justify-center gap-3 rounded-xl bg-primary px-8 py-4 font-headline text-sm font-bold uppercase tracking-[0.2em] text-on-primary transition-all hover:shadow-[0_10px_30px_rgba(211,254,67,0.3)] disabled:opacity-50"
+						>
+							{sending ? 'ENVOI...' : 'ENVOYER'}
+							<Send size={14} />
+						</button>
+					</form>
+				{/if}
 			</div>
 		</div>
 	</div>

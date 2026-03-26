@@ -1,5 +1,8 @@
 import type { Component } from 'svelte';
-import {type LucideIcon} from '@lucide/svelte';
+
+// lucide-svelte v1 uses the Svelte 4 class API — type as a generic constructor
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type LucideIcon = new (...args: any[]) => any;
 
 export interface ExperienceItem {
 	variant: 'featured' | 'compact';

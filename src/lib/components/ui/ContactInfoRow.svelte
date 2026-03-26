@@ -8,7 +8,9 @@
 		subtitle,
 		href
 	}: {
-		icon: Component;
+		// lucide-svelte v1 uses the Svelte 4 class API — accept any constructor alongside Component
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		icon: Component | (new (...args: any[]) => any);
 		label: string;
 		value: string;
 		subtitle?: string;
