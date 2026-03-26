@@ -22,7 +22,7 @@
 					}
 				}
 			},
-			{ rootMargin: '-40% 0px -50% 0px', threshold: 0 }
+			{ rootMargin: '-40% 0px -55% 0px', threshold: 0 }
 		);
 		sections.forEach((el) => observer.observe(el));
 	});
