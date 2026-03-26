@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ```bash
 pnpm run dev          # Start development server
-pnpm run build        # Production build (outputs static files)
+pnpm run build        # Production build
 pnpm run preview      # Preview production build locally
 pnpm run check        # Type-check with svelte-check
 pnpm run check:watch  # Type-check in watch mode
@@ -18,7 +18,7 @@ There is no test runner configured.
 
 ## Architecture
 
-**SvelteKit v2** static site (via `@sveltejs/adapter-static`) built with Svelte 5 Runes. All pages compile to static HTML/CSS/JS — there is no server-side runtime.
+**SvelteKit v2** site (via `@sveltejs/adapter-auto`) built with Svelte 5 Runes. The adapter auto-detects the deployment platform (Vercel, Netlify, Cloudflare, etc.).
 
 - `src/routes/` — SvelteKit file-based routing. `+page.svelte` = page, `+layout.svelte` = shared layout, `layout.css` = global styles.
 - `src/lib/` — Shared components and utilities, importable via `$lib/`.
@@ -27,7 +27,7 @@ There is no test runner configured.
 
 **Key config:**
 
-- `svelte.config.js` — Static adapter, Svelte Runes enabled.
+- `svelte.config.js` — Auto adapter, Svelte Runes enabled.
 - `vite.config.ts` — Tailwind CSS v4 Vite plugin + SvelteKit plugin.
 - `tsconfig.json` — Strict TypeScript, bundler module resolution.
 - `eslint.config.js` — Flat config (ESLint v9+) with TS + Svelte + Prettier.
