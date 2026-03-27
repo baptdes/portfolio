@@ -90,6 +90,11 @@
 }
 
 @layer utilities {
+	.btn-primary {
+		background: linear-gradient(135deg, #d3fe43 0%, #a8d000 100%);
+		@apply inline-flex cursor-pointer items-center justify-center rounded-xl font-headline font-bold uppercase tracking-widest text-on-primary transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(211,254,67,0.25)] active:scale-95 disabled:pointer-events-none disabled:opacity-50;
+	}
+
 	.primary-gradient-text {
 		background: linear-gradient(135deg, #d3fe43 0%, #a8d000 100%);
 		-webkit-background-clip: text;

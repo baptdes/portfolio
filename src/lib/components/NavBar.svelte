@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
 	import type { NavLink } from '$lib/types/portfolio';
+	import { Download } from 'lucide-svelte';
 
 	const links: NavLink[] = [
 		{ label: 'EXPERIENCES', href: '#exp' },
@@ -47,10 +48,8 @@
 			{/each}
 		</div>
 
-		<a
-			href="/resume.pdf"
-			class="scale-95 rounded-lg bg-primary px-6 py-2 font-headline text-xs font-bold tracking-widest text-on-primary uppercase transition-all duration-300 hover:opacity-90 active:scale-90"
-		>
+		<a href="/CV_Mars_2026.pdf" class="btn-primary gap-2 px-5 py-2 text-xs">
+			<Download size={16} />
 			CV
 		</a>
 	</div>

@@ -50,12 +50,8 @@
 			</p>
 
 			<div class="flex justify-center gap-6 lg:justify-start">
-				<a
-					href="#contact"
-					class="flex items-center gap-3 rounded-xl bg-primary px-10 py-4 text-on-primary transition-all hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(211,254,67,0.2)]"
-				>
-					<span class="font-headline text-sm font-bold tracking-widest uppercase">Me contacter</span
-					>
+				<a href="#contact" class="btn-primary gap-3 px-10 py-4 text-sm">
+					Me contacter
 					<ArrowRight size={20} />
 				</a>
 			</div>
@@ -71,7 +67,7 @@
 			>
 				<div class="absolute inset-0 z-10 flex items-center justify-center bg-black/40">
 					<button
-						class="flex font-headline h-10 w-50 items-center justify-center rounded-full bg-primary/90 text-on-primary transition-transform hover:scale-110"
+						class="flex font-headline h-10 w-50 items-center justify-center rounded-full bg-primary/90 text-on-primary"
 					>
 						IN PROGRESS ⚒️
 					</button>

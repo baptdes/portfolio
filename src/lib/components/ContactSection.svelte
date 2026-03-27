@@ -63,7 +63,7 @@
 					Je recherche un poste en développement ou en R&D à partir d'octobre 2026.
 				</p>
 
-				<div class="grid grid-cols-2 gap-6">
+				<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
 					{#each contactInfo as info (info.label)}
 						<ContactInfoRow
 							icon={info.icon}
@@ -159,7 +159,7 @@
 						<button
 							type="submit"
 							disabled={sending}
-							class="mt-2 inline-flex items-center justify-center gap-3 rounded-xl bg-primary px-8 py-4 font-headline text-sm font-bold uppercase tracking-[0.2em] text-on-primary transition-all hover:shadow-[0_10px_30px_rgba(211,254,67,0.3)] disabled:opacity-50"
+							class="btn-primary mt-2 w-full gap-3 px-8 py-4 text-sm"
 						>
 							{sending ? 'ENVOI...' : 'ENVOYER'}
 							<Send size={14} />

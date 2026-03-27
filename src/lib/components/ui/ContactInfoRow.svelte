@@ -18,9 +18,13 @@
 	} = $props();
 </script>
 
-<div class="group flex items-center gap-6">
+<svelte:element
+	this={href ? 'a' : 'div'}
+	{href}
+	class="group flex items-center gap-3 sm:gap-6 {href ? 'cursor-pointer' : ''}"
+>
 	<div
-		class="flex h-14 w-14 items-center justify-center rounded-2xl bg-surface-container-highest transition-all {href
+		class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-surface-container-highest transition-all sm:h-14 sm:w-14 sm:rounded-2xl {href
 			? 'group-hover:bg-primary'
 			: ''}"
 	>
@@ -35,17 +39,17 @@
 		<div class="mb-1 font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">
 			{label}
 		</div>
-		{#if href}
-			<a href={href} class="font-headline text-lg font-bold transition-colors hover:text-primary">
-				{value}
-			</a>
-		{:else}
-			<div class="font-headline text-lg font-bold">{value}</div>
-		{/if}
+		<div
+			class="break-all font-headline text-sm font-bold sm:text-lg {href
+				? 'transition-colors group-hover:text-primary'
+				: ''}"
+		>
+			{value}
+		</div>
 		{#if subtitle}
 			<div class="mt-0.5 font-label text-[9px] uppercase tracking-[0.2em] text-on-surface-variant opacity-50">
 				{subtitle}
 			</div>
 		{/if}
 	</div>
-</div>
+</svelte:element>
