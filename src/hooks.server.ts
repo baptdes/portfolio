@@ -11,11 +11,11 @@ export const handle: Handle = async ({ event, resolve }) => {
 		'Content-Security-Policy',
 		[
 			"default-src 'self'",
-			"script-src 'self'",
+			"script-src 'self' https://cloud.umami.is",
+      		"connect-src 'self' https://cloud.umami.is",
 			"style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
 			"font-src 'self' https://fonts.gstatic.com",
 			"img-src 'self' data: https:",
-			"connect-src 'self'",
 			"frame-ancestors 'none'"
 		].join('; ')
 	);
