@@ -11,9 +11,9 @@
 		<div class="absolute left-1/4 top-1/4 h-96 w-96 rounded-full bg-primary blur-[120px]"></div>
 	</div>
 
-	<div class="z-10 grid w-full max-w-7xl grid-cols-1 items-center gap-12 py-20 lg:grid-cols-2">
+	<div class="z-10 grid w-full max-w-7xl grid-cols-1 items-center gap-12 py-20">
 		<!-- Left: Text content -->
-		<div class="text-center lg:text-left">
+		<div class="text-center">
 			<div
 				class="mb-10 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 font-headline text-[10px] tracking-[0.3em] text-primary uppercase"
 			>
@@ -27,7 +27,7 @@
 				BAPTISTE <br />DESNOUCK
 			</h1>
 
-			<div class="mb-10 flex flex-wrap items-center justify-center gap-4 lg:justify-start">
+			<div class="mb-10 flex flex-wrap items-center justify-center gap-4">
 				<span
 					class="font-headline text-sm font-light tracking-[0.4em] text-on-surface-variant/80 uppercase md:text-lg"
 				>
@@ -42,44 +42,18 @@
 			</div>
 
 			<p
-				class="mx-auto mb-12 max-w-xl font-body text-base leading-relaxed text-on-surface-variant opacity-80 md:text-lg lg:mx-0"
+				class="mx-auto mb-12 max-w-xl font-body text-base leading-relaxed text-on-surface-variant opacity-80 md:text-lg"
 			>
 				Spécialisé en intelligence artificielle et vision par ordinateur, 
 				je recherche un poste en développement ou en R&D <br />
 				à partir d'<span class="font-semibold text-primary">octobre 2026</span>.
 			</p>
 
-			<div class="flex justify-center gap-6 lg:justify-start">
+			<div class="flex justify-center gap-6">
 				<a href="#contact" class="btn-primary gap-3 px-10 py-4 text-sm">
 					Me contacter
 					<ArrowRight size={20} />
 				</a>
-			</div>
-		</div>
-
-		<!-- Right: Video placeholder -->
-		<div class="group relative">
-			<div
-				class="absolute -inset-1 from-primary to-secondary opacity-20 blur-2xl transition-opacity group-hover:opacity-30"
-			></div>
-			<div
-				class="relative aspect-video overflow-hidden rounded-3xl border border-white/10 bg-surface-container-highest shadow-2xl"
-			>
-				<div class="absolute inset-0 z-10 flex items-center justify-center bg-black/40">
-					<button
-						class="flex font-headline h-10 w-50 items-center justify-center rounded-full bg-primary/90 text-on-primary"
-					>
-						IN PROGRESS ⚒️
-					</button>
-				</div>
-				<div class="h-full w-full bg-surface-container-highest"></div>
-				<div class="absolute bottom-6 left-6 z-20">
-					<div
-						class="rounded bg-black/60 px-3 py-1 font-headline text-[10px] tracking-widest text-white uppercase backdrop-blur-md"
-					>
-						Video Intro // 0:45
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
